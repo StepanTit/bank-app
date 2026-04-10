@@ -7,7 +7,8 @@ public enum OperationType {
     ACCOUNT_CLOSE,
     ACCOUNT_DEPOSIT,
     ACCOUNT_TRANSFER,
-    ACCOUNT_WITHDRAW;
+    ACCOUNT_WITHDRAW,
+    EXIT;
 
     public static OperationType fromString(String value) {
         for (OperationType type : values()) {

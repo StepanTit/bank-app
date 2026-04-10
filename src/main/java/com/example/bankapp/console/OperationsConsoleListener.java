@@ -53,6 +53,10 @@ public class OperationsConsoleListener {
                     case ACCOUNT_DEPOSIT -> handleAccountDeposit(scanner);
                     case ACCOUNT_TRANSFER -> handleAccountTransfer(scanner);
                     case ACCOUNT_WITHDRAW -> handleAccountWithdraw(scanner);
+                    case EXIT -> {
+                        handleExit();
+                        return;
+                    }
                     default -> System.out.println("Unsupported operation: " + operationType);
                 }
             } catch (Exception e) {
@@ -70,6 +74,11 @@ public class OperationsConsoleListener {
         System.out.println("-ACCOUNT_DEPOSIT");
         System.out.println("-ACCOUNT_TRANSFER");
         System.out.println("-USER_CREATE");
+        System.out.println("-EXIT");
+    }
+
+    private void handleExit() {
+        System.out.println("Goodbye.");
     }
 
     private void handleUserCreate(Scanner scanner) {
